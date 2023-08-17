@@ -14,6 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+ALLOWED_HOSTS = []
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +26,6 @@ SECRET_KEY = 'django-insecure--e=kb2&@h72%p2j#qk^isdjhrvsk$ohxtd3_n3fwxcgwl+5!=m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'core.apps.CoreConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
